@@ -1,0 +1,27 @@
+class Todo
+	attr_reader :name, :description
+
+	def initialize(data)
+		@name = data[:name]
+		@description = data[:description]
+	end
+	
+end
+
+class TodoManager
+	def initialize
+		@current_id = 1
+		@todos = []
+	end
+
+	def find(id)
+
+	end
+
+	def add_todo(data)
+
+	end
+
+	def all_todos
+	end
+end
