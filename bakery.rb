@@ -10,8 +10,6 @@ class Cart
     def initialize()
         @items = [];
        @id = ""
-
-
     end
     def contents()
         return @items
@@ -55,7 +53,13 @@ get('/cart')do
 end
 
 get('/thnx')do
-
+    mg_client = Mailgun::Client.new (ENV['MAILGUN_API_KEY'])
+    message_params =  { from: 'mckiernantim@gmail.com',
+                      to:   'mckiernantim@gmail.com',
+                      subject: 'recipt',
+                      html:   erb(:thnx, layout:false)
+                    }
+     mg_client.send_message ENV['MAILGUN_API_DOMAIN'], message_params
     erb(:thnx)
 end
 post('/muffins')do
@@ -65,12 +69,8 @@ end
 
 
 post('/connect') do
-
-    # First, instantiate the Mailgun Client with your API key
     mg_client = Mailgun::Client.new (ENV['MAILGUN_API_KEY'])
-
-  # Define your message parameters
-  message_params =  { from: 'mckiernantim@gmail.com',
+    message_params =  { from: 'mckiernantim@gmail.com',
                       to:   params[:connect],
                       subject: 'product catalogue',
                       text:    'Spring is here!  Friendly Bakery is back with some sweet spring deals just in time for Memorial day!
@@ -144,13 +144,8 @@ post('/connect') do
                                 Your friends at Friendly.  
 
                                 Peace'
-                
-
-
-                  }
-
-  # Send your message through the client
-  mg_client.send_message ENV['MAILGUN_API_DOMAIN'], message_params
+                    }
+    mg_client.send_message ENV['MAILGUN_API_DOMAIN'], message_params
 
 
     erb(:cookies)
