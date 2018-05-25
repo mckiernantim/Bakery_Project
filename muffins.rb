@@ -18,18 +18,12 @@ class Muffin_order
         self
     end
      def premium()
-        # @price = @price.to_i*3
+       
         @tier = "premium"
         self
     end
    
-    # def half_dozen(num)
-    
-    #     @price = (@price.to_i)*5*num
-    #     @quantity*=6*num
-    #     self
-    # end
-    
+
     
    
     def choch()
@@ -52,22 +46,5 @@ class Muffin_order
     end
 end
 
-# post("/muffins_poppy")do
-# # byebug
-#     p %%%%%%%%%%%%%%%
-#     p params
-#     p params[:DozenPoppy]
-    
-#     this_order = Muffin_order.new(params)
-#     # 
-#     unless params[:DozenPoppy].nil? then 
-    
-#          this_order.quantity = @quantity.to_i + (params[:DozenPoppy] * 12)
-#     end
-#     unless params[:HalfDozPoppy].nil? then 
-#         this_order.params([:HalfDozPoppy]) = @quantity.to_i + (params[:HalfDozPpoppy] * 6)
-#     end
-#     my_cart.push(this_order)
-#     redirect "muffins"
 
     

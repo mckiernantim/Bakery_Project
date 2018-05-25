@@ -1,3 +1,4 @@
+# Will be initialized down the road once we get a cart page running
 class Cart
     def initialize
         @current_id = 1
