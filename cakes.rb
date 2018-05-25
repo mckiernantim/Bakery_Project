@@ -1,5 +1,6 @@
 
 class Cake_order
+    
     attr_reader :kind, :price, :size, :quantity, :tier
     def initialize()
         @price = 10.to_i
@@ -28,8 +29,8 @@ class Cake_order
         @tier = "standard"
         
     end
-    def carrot()
-        @kind = "carrot_cake"
+    def angelfood()
+        @kind = "angel_food"
         @tier = "standard" 
         
     end

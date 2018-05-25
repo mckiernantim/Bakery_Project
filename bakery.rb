@@ -6,20 +6,8 @@ require './cookies'
 require "./cakes"
 require "./muffins"
 order_counter = 1
-class Cart
-    def initialize()
-        @items = [];
-       @id = ""
-    end
-    def contents()
-        return @items
-
-    end
-    
-end
 
 
-my_cart = Cart.new()
 
 
 get('/')do
