@@ -1,3 +1,4 @@
+# don't require the files/gems unless they are needed
 require 'sinatra'
 require 'byebug'
 require 'mailgun'

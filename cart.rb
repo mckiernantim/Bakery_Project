@@ -1,4 +1,6 @@
 # Will be initialized down the road once we get a cart page running
+
+# need to require Cookie_order
 class Cart
     def initialize
         @current_id = 1
