@@ -8,7 +8,7 @@ require "./bakery"
 class Cart
     def initialize()
         @items = [];
-        @order_number = order_counter
+        @order_number = order_counter # there is nothing called order_counter being passed into this initialize
 
 
     end
